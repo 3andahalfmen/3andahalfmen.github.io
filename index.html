@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PNG Geothermal Solutions | Three and a Half Men</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --success: #27ae60;
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: #f9f9f9;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--accent);
+        }
+        
+        h3 {
+            font-size: 1.8rem;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--secondary);
+            transition: var(--transition);
+        }
+        
+        a:hover {
+            color: var(--accent);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            color: var(--accent);
+            margin-right: 10px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 2rem;
+        }
+        
+        nav ul li a {
+            color: white;
+            font-weight: 500;
+            position: relative;
+        }
+        
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            bottom: -5px;
+            left: 0;
+            transition: var(--transition);
+        }
+        
+        nav ul li a:hover:after {
+            width: 100%;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1588591795084-1770cb3be374?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            color: white;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            padding-top: 80px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            animation: fadeInUp 1s ease;
+        }
+        
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .btn:hover {
+            background: #c0392b;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid white;
+            margin-left: 15px;
+        }
+        
+        .btn-outline:hover {
+            background: white;
+            color: var(--primary);
+        }
+        
+        /* About Section */
+        .section {
+            padding: 100px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            display: inline-block;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .about-img {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            transform: perspective(1000px) rotateY(10deg);
+            transition: var(--transition);
+        }
+        
+        .about-img:hover {
+            transform: perspective(1000px) rotateY(0deg);
+        }
+        
+        .about-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Team Section */
+        .team {
+            background: var(--light);
+        }
+        
+        .team-members {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .member {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: var(--transition);
+            text-align: center;
+            padding: 30px 20px;
+        }
+        
+        .member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        
+        .member-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            overflow: hidden;
+            border: 5px solid var(--light);
+        }
+        
+        .member-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .member h3 {
+            margin-bottom: 5px;
+        }
+        
+        .member p {
+            color: var(--secondary);
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        
+        /* Geothermal Process */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .step {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .step:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--accent);
+            transition: var(--transition);
+        }
+        
+        .step:hover:before {
+            width: 100%;
+            opacity: 0.1;
+        }
+        
+        .step-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: rgba(0,0,0,0.1);
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: -1;
+        }
+        
+        /* Prospects Section */
+        .prospects {
+            background: var(--light);
+        }
+        
+        .prospect-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .prospect-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: var(--transition);
+        }
+        
+        .prospect-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        
+        .prospect-img {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .prospect-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .prospect-card:hover .prospect-img img {
+            transform: scale(1.1);
+        }
+        
+        .prospect-content {
+            padding: 20px;
+        }
+        
+        .prospect-content h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .temp {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        
+        /* Challenges & Solutions */
+        .challenge {
+            margin-bottom: 50px;
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .challenge-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .challenge-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        
+        .solution {
+            background: var(--light);
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+            border-left: 4px solid var(--success);
+        }
+        
+        .solution h4 {
+            color: var(--success);
+            margin-bottom: 10px;
+        }
+        
+        /* Stats */
+        .stats {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .stat-item {
+            padding: 30px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            transition: var(--transition);
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-10px);
+            background: rgba(255,255,255,0.2);
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--accent);
+        }
+        
+        .stat-text {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        /* References */
+        .references {
+            background: var(--light);
+            padding: 50px 0;
+        }
+        
+        .references-list {
+            columns: 2;
+            column-gap: 40px;
+        }
+        
+        .references-list li {
+            margin-bottom: 10px;
+            break-inside: avoid;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: rgba(255,255,255,0.7);
+            transition: var(--transition);
+        }
+        
+        .footer-column ul li a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            color: white;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background: var(--accent);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .hero h1 {
+                font-size: 3rem;
+            }
+            
+            .references-list {
+                columns: 1;
+            }
+            
+            nav ul {
+                display: none;
+            }
+        }
+        
+        /* 3D Card Effect */
+        .card-3d {
+            transform-style: preserve-3d;
+            transition: transform 0.5s ease;
+        }
+        
+        .card-3d:hover {
+            transform: rotateY(10deg) rotateX(5deg);
+        }
+        
+        /* Floating Animation */
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+        
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <i class="fas fa-fire"></i>
+                <span>Three and a Half Men</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#process">Process</a></li>
+                    <li><a href="#prospects">Prospects</a></li>
+                    <li><a href="#challenges">Challenges</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Harnessing Papua New Guinea's Geothermal Potential</h1>
+                <p>A sustainable energy solution for one of the most geologically active regions on Earth</p>
+                <div>
+                    <a href="#about" class="btn">Learn More</a>
+                    <a href="#contact" class="btn btn-outline">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Papua New Guinea</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Geography and Climate</h3>
+                    <p>Papua New Guinea is located on the eastern part of New Guinea, north of Australia, and contains multiple smaller islands within. The geographical structure features mountains, rugged terrain, dense valleys, and active volcanic areas.</p>
+                    <p>The highlands are home to dense rural populations (85% of total), while the Southern Coast has more urban infrastructure. The lowlands have sparser populations due to dense vegetation and challenging soil conditions.</p>
+                    <p>The climate remains tropical year-round with hot and humid conditions. Heavy rainfall often results in landslides and erosion, along with natural hazards like earthquakes, volcanic eruptions, floods, and cyclones.</p>
+                </div>
+                <div class="about-img card-3d">
+                    <img src="https://images.unsplash.com/photo-1588591795084-1770cb3be374?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Papua New Guinea Landscape">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="section team">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Team: Three and a Half Men</h2>
+                <p>The brilliant minds behind this geothermal energy solution</p>
+            </div>
+            <div class="team-members">
+                <div class="member floating">
+                    <div class="member-img">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rohan Saravanan">
+                    </div>
+                    <h3>Rohan Saravanan</h3>
+                    <p>Team Member</p>
+                    <p>Contributed to research and presentation development</p>
+                </div>
+                <div class="member floating" style="animation-delay: 0.2s;">
+                    <div class="member-img">
+                        <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="Kevin Wei">
+                    </div>
+                    <h3>Kevin Wei</h3>
+                    <p>Team Member</p>
+                    <p>Contributed to research and presentation development</p>
+                </div>
+                <div class="member floating" style="animation-delay: 0.4s;">
+                    <div class="member-img">
+                        <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Sarveshwar Senthil Kumar">
+                    </div>
+                    <h3>Sarveshwar Senthil Kumar</h3>
+                    <p>Team Member</p>
+                    <p>Contributed to research and presentation development</p>
+                </div>
+                <div class="member floating" style="animation-delay: 0.6s;">
+                    <div class="member-img">
+                        <img src="https://randomuser.me/api/portraits/men/89.jpg" alt="Owen Bruno">
+                    </div>
+                    <h3>Owen Bruno</h3>
+                    <p>Team Member</p>
+                    <p>Contributed to research and presentation development</p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Geothermal Process Section -->
+    <section id="process" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>How Geothermal Energy Works</h2>
+                <p>Harnessing the Earth's natural heat through physics</p>
+            </div>
+            <div class="process-steps">
+                <div class="step card-3d">
+                    <div class="step-number">1</div>
+                    <h3>Heat Source</h3>
+                    <p>The Earth's core heats rocks and water to extremely high temperatures (300°C+ in PNG). In volcanic areas like PNG's Ring of Fire, this heat is close to the surface.</p>
+                </div>
+                <div class="step card-3d">
+                    <div class="step-number">2</div>
+                    <h3>Water Heating</h3>
+                    <p>Water trapped in porous rocks or fractures becomes superheated. Due to the high temperature and confinement, the water turns into high-pressure steam.</p>
+                </div>
+                <div class="step card-3d">
+                    <div class="step-number">3</div>
+                    <h3>Energy Extraction</h3>
+                    <p>The steam is directed through pipes toward turbines. The force (pressure) of the moving steam spins the turbine blades, converting thermal energy into mechanical (rotational) energy.</p>
+                </div>
+                <div class="step card-3d">
+                    <div class="step-number">4</div>
+                    <h3>Electricity Generation</h3>
+                    <p>The spinning turbine rotates magnets within a generator, creating electrical current through electromagnetic induction. This electricity is then distributed through power lines.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prospects Section -->
+    <section id="prospects" class="section prospects">
+        <div class="container">
+            <div class="section-title">
+                <h2>Geothermal Prospects in PNG</h2>
+                <p>Identified sites with high potential for geothermal development</p>
+            </div>
+            <div class="prospect-grid">
+                <div class="prospect-card card-3d">
+                    <div class="prospect-img">
+                        <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Taleasa Prospect">
+                    </div>
+                    <div class="prospect-content">
+                        <h3>Taleasa Prospect</h3>
+                        <span class="temp">300°C</span>
+                        <p>Located along the Willaumez Peninsula on New Britain Island. Features the active Garbuna Volcano which erupted in 2005. High reservoir temperature with potential for development.</p>
+                    </div>
+                </div>
+                <div class="prospect-card card-3d">
+                    <div class="prospect-img">
+                        <img src="https://images.unsplash.com/photo-1611095973763-4147e0b8d3f0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Kasiloi Prospect">
+                    </div>
+                    <div class="prospect-content">
+                        <h3>Kasiloi Prospect</h3>
+                        <span class="temp">>200°C</span>
+                        <p>Near the active Pago Volcano in Cape Hoskins area. Features hot clear water pools, mud pools, and small geysers. Neutral chloride spring with high temperature reservoirs.</p>
+                    </div>
+                </div>
+                <div class="prospect-card card-3d">
+                    <div class="prospect-img">
+                        <img src="https://images.unsplash.com/photo-1504196606672-aef5cc9e3884?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Silanga Prospect">
+                    </div>
+                    <div class="prospect-content">
+                        <h3>Silanga Prospect</h3>
+                        <span class="temp">300°C</span>
+                        <p>Located 30km east of Mount Pago on New Britain Island. Very high reservoir temperatures make this a favorable prospect for further studies and development.</p>
+                    </div>
+                </div>
+                <div class="prospect-card card-3d">
+                    <div class="prospect-img">
+                        <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Deidei Prospect">
+                    </div>
+                    <div class="prospect-content">
+                        <h3>Deidei Prospect</h3>
+                        <span class="temp">200-250°C</span>
+                        <p>On Fergusson Island in the D'Entrecasteaux Islands. Features acidic springs, small geysers, fumaroles, boiling springs, mud pools, and silica terraces. Very promising.</p>
+                    </div>
+                </div>
+                <div class="prospect-card card-3d">
+                    <div class="prospect-img">
+                        <img src="https://images.unsplash.com/photo-1507048331197-7d4ac70811cf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Feni Prospect">
+                    </div>
+                    <div class="prospect-content">
+                        <h3>Feni Prospect</h3>
+                        <span class="temp">234-250°C</span>
+                        <p>160km southeast from Lihir. Includes hot springs, fumaroles, mud pools and sinter terrace. Promising with reservoir temperatures up to 250°C.</p>
+                    </div>
+                </div>
+                <div class="prospect-card card-3d">
+                    <div class="prospect-img">
+                        <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Lihir Island">
+                    </div>
+                    <div class="prospect-content">
+                        <h3>Lihir Island</h3>
+                        <span class="temp">300°C+</span>
+                        <p>Currently uses geothermal energy for power generation for gold mining. Existing 50MW plant demonstrates PNG's geothermal potential.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Energy Demand Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>PNG's Energy Landscape</h2>
+                <p>Current energy sources and future needs</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Current Energy Mix</h3>
+                    <p>In 2022, fossil fuels accounted for about 75% of total electricity generation in PNG. The country is heavily dependent on petroleum and natural gas, with crude oil reserves estimated at 159.7 million barrels and gas reserves at 183.1 billion cubic meters.</p>
+                    <p>Renewable energy makes up the remaining 25%, with hydropower accounting for 69.3% of renewable electricity and geothermal currently at 28.6%.</p>
+                    
+                    <h3>Energy Access</h3>
+                    <p>PNG has one of the lowest electrification rates in the Pacific, with only 13% of the population having access to reliable electricity. The government aims to increase this to 70% by 2030, requiring about 300MW of additional capacity.</p>
+                    
+                    <h3>Economic Context</h3>
+                    <p>With a GDP of $32.86 billion and 40% of the population living in poverty, energy costs are significant. The average annual electric bill is $225 USD at $0.50 per kWh - one of the highest rates in the world relative to income levels.</p>
+                </div>
+                <div class="about-img card-3d">
+                    <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Energy Infrastructure">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="section-title">
+                <h2>PNG by the Numbers</h2>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">3,000-4,000</div>
+                    <div class="stat-text">MW Geothermal Potential</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">13%</div>
+                    <div class="stat-text">Population with Electricity Access</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">55</div>
+                    <div class="stat-text">Known Geothermal Areas</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">154/193</div>
+                    <div class="stat-text">HDI Ranking</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenges Section -->
+    <section id="challenges" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Challenges & Solutions</h2>
+                <p>Overcoming obstacles to geothermal development in PNG</p>
+            </div>
+            
+            <div class="challenge">
+                <div class="challenge-header">
+                    <div class="challenge-icon">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <div>
+                        <h3>Geographic and Terrain Obstacles</h3>
+                        <p>Rugged terrain makes infrastructure development difficult</p>
+                    </div>
+                </div>
+                <p>PNG's mountainous landscape and dense vegetation make building roads, power lines, and pipelines extremely challenging. Only 68% of the rural population lives within 2km of an all-season road, and the 30,000km road network is in poor condition. Additionally, location on the Pacific Ring of Fire means frequent earthquakes, volcanic activity, and tsunamis.</p>
+                <div class="solution">
+                    <h4>Our Solution</h4>
+                    <p><strong>Seismic-Resilient Architecture:</strong> Implementing designs used in earthquake-prone cities like Tokyo and San Francisco. Modular, decentralized plants can reduce transmission needs. Helicopter transport for critical components to remote sites.</p>
+                </div>
+            </div>
+            
+            <div class="challenge">
+                <div class="challenge-header">
+                    <div class="challenge-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div>
+                        <h3>High Upfront Capital Costs</h3>
+                        <p>Significant initial investment required</p>
+                    </div>
+                </div>
+                <p>Geothermal projects require substantial initial investment for exploration, drilling, and plant construction. PNG's external debt of $18.7 billion makes financing challenging, and the long payback period discourages private investment.</p>
+                <div class="solution">
+                    <h4>Our Solution</h4>
+                    <p><strong>Public-Private Partnerships:</strong> Leveraging international funding from organizations like the World Bank. Phased development starting with proven sites like Lihir Island. Revenue-sharing models with local communities.</p>
+                </div>
+            </div>
+            
+            <div class="challenge">
+                <div class="challenge-header">
+                    <div class="challenge-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div>
+                        <h3>Infrastructure Deficiencies</h3>
+                        <p>Limited and unreliable power grid</p>
+                    </div>
+                </div>
+                <p>PNG's power grid experiences over 40 blackouts monthly. Most of the population lives off-grid, and existing power lines can't support additional capacity. There's also a lack of technical expertise for plant maintenance.</p>
+                <div class="solution">
+                    <h4>Our Solution</h4>
+                    <p><strong>Build New Infrastructure:</strong> Treat this as an opportunity for economic growth, the likes of the Hoover Dam and Snowy Mountains Scheme. Implement smart microgrids in highland population centers. Comprehensive training programs for local technicians.</p>
+                </div>
+            </div>
+            
+            <div class="challenge">
+                <div class="challenge-header">
+                    <div class="challenge-icon">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <div>
+                        <h3>Regulatory and Political Barriers</h3>
+                        <p>Land ownership and governance challenges</p>
+                    </div>
+                </div>
+                <p>97% of PNG's land is under customary indigenous ownership, creating complex negotiation processes. Political instability and corruption (ranked 127/180 on corruption index) add additional hurdles.</p>
+                <div class="solution">
+                    <h4>Our Solution</h4>
+                    <p><strong>Community Engagement:</strong> Transparent benefit-sharing agreements modeled after successful projects like Morocco's Noor Solar Project. Bipartisan political support similar to Ethiopia's Grand Renaissance Dam project.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- References Section -->
+    <section class="references section">
+        <div class="container">
+            <div class="section-title">
+                <h2>References</h2>
+            </div>
+            <ul class="references-list">
+                <li>Enerdata. (2023). Papua New Guinea Energy Market. <a href="https://www.enerdata.net/estore/energy-market/papua-new-guinea/" target="_blank">https://www.enerdata.net/estore/energy-market/papua-new-guinea/</a></li>
+<li>Global Health Security Index. (2021). Papua New Guinea. <a href="https://ghsindex.org/country/papua-new-guinea/" target="_blank">https://ghsindex.org/country/papua-new-guinea/</a></li>
+<li>Hamambi, M. (2021). Present Electricity Power Crisis: Also Paying the Price of the Past. LinkedIn. <a href="https://www.linkedin.com/pulse/present-electricity-power-crisis-also-paying-price-past-hamambi-pzllc/" target="_blank">https://www.linkedin.com/pulse/present-electricity-power-crisis-also-paying-price-past-hamambi-pzllc/</a></li>
+<li>Human Rights Measurement Initiative. (2023). Rights Tracker: Papua New Guinea. <a href="https://humanrightsmeasurement.org/data-in-action-spotlight-on-papua-new-guinea/" target="_blank">https://humanrightsmeasurement.org/data-in-action-spotlight-on-papua-new-guinea/</a></li>
+<li>Human Rights Watch. (2024). World Report 2024: Papua New Guinea. <a href="https://www.hrw.org/world-report/2024/country-chapters/papua-new-guinea" target="_blank">https://www.hrw.org/world-report/2024/country-chapters/papua-new-guinea</a></li>
+<li>Legatum Institute. (2023). Legatum Prosperity Index: Papua New Guinea. <a href="https://index.prosperity.com/globe/papua-new-guinea" target="_blank">https://index.prosperity.com/globe/papua-new-guinea</a></li>
+<li>Mongabay. (2019). Bumpy Ride for Conservation in PNG as Lack of Roads Hinders Activities. <a href="https://news.mongabay.com/2019/06/bumpy-ride-for-conservation-in-png-as-lack-of-roads-hinders-activities/" target="_blank">https://news.mongabay.com/2019/06/bumpy-ride-for-conservation-in-png-as-lack-of-roads-hinders-activities/</a></li>
+<li>Macrotrends. (2023). Papua New Guinea External Debt. <a href="https://www.macrotrends.net/global-metrics/countries/PNG/papua-new-guinea/external-debt-stock" target="_blank">https://www.macrotrends.net/global-metrics/countries/PNG/papua-new-guinea/external-debt-stock</a></li>
+<li>Pacific Data Hub. (n.d.). Customary Land in Papua New Guinea. <a href="https://pacificdata.org/data/fr/dataset/customary-landc6d4996b-5ef6-4aa9-bcf0-1cba0b8a229e/resource/b1264915-9a09-44f4-87a4-181280bfef19" target="_blank">https://pacificdata.org/data/fr/dataset/customary-landc6d4996b-5ef6-4aa9-bcf0-1cba0b8a229e/resource/b1264915-9a09-44f4-87a4-181280bfef19</a></li>
+<li>PNG National Research Institute. (2023). Rural Road Network Must Be Improved. <a href="https://pngnri.org/index.php/blog-release/183-rural-road-network-must-be-improved-to-boost-rural-economy" target="_blank">https://pngnri.org/index.php/blog-release/183-rural-road-network-must-be-improved-to-boost-rural-economy</a></li>
+<li>ResearchGate. (n.d.). Map of Papua New Guinea Showing Locations of Known Geothermal Areas. <a href="https://www.researchgate.net/figure/Map-of-Papua-New-Guinea-showing-the-locations-of-known-geothermal-areas-from-Mosusu_fig2_229036839" target="_blank">https://www.researchgate.net/figure/Map-of-Papua-New-Guinea-showing-the-locations-of-known-geothermal-areas-from-Mosusu_fig2_229036839</a></li>
+<li>The Guardian. (2024). Papua New Guinea Landslide. <a href="https://www.theguardian.com/world/article/2024/may/24/papua-new-guinea-fears-up-to-100-dead-after-landslide-in-remote-northern-region" target="_blank">https://www.theguardian.com/world/article/2024/may/24/papua-new-guinea-fears-up-to-100-dead-after-landslide-in-remote-northern-region</a></li>
+<li>Transparency International. (2023). Corruption Perceptions Index: Papua New Guinea. <a href="https://www.transparency.org/en/countries/papua-new-guinea" target="_blank">https://www.transparency.org/en/countries/papua-new-guinea</a></li>
+<li>UNDP. (2023). Human Development Report. <a href="https://www.undp.org/papua-new-guinea/news/rich-countries-attain-record-human-development-while-half-poorest-have-gone-backwards-finds-new-undp-report" target="_blank">https://www.undp.org/papua-new-guinea/news/rich-countries-attain-record-human-development-while-half-poorest-have-gone-backwards-finds-new-undp-report</a></li>
+<li>U.S. Department of Commerce. (2023). Papua New Guinea - Digital Economy. <a href="https://www.trade.gov/country-commercial-guides/papua-new-guinea-digital-economy" target="_blank">https://www.trade.gov/country-commercial-guides/papua-new-guinea-digital-economy</a></li>
+<li>World Bank. (2020). Delivering Affordable, Sustainable and Reliable Power to Papua New Guineans. <a href="https://documents1.worldbank.org/curated/en/100651574343960624/pdf/Delivering-Affordable-Sustainable-and-Reliable-Power-to-Papua-New-Guineans-Key-Challenges-and-Opportunities-in-the-Power-and-Domestic-Gas-Sectors.pdf" target="_blank">https://documents1.worldbank.org/curated/en/100651574343960624/pdf/Delivering-Affordable-Sustainable-and-Reliable-Power-to-Papua-New-Guineans-Key-Challenges-and-Opportunities-in-the-Power-and-Domestic-Gas-Sectors.pdf</a></li>
+<li>World Habitat. (n.d.). Improved Traditional Housing Systems in Papua New Guinea. <a href="https://world-habitat.org/world-habitat-awards/winners-and-finalists/improved-traditional-housing-systems/" target="_blank">https://world-habitat.org/world-habitat-awards/winners-and-finalists/improved-traditional-housing-systems/</a></li>
+<li>Worldometers. (2023). Papua New Guinea GDP. <a href="https://www.worldometers.info/gdp/papua-new-guinea-gdp/" target="_blank">https://www.worldometers.info/gdp/papua-new-guinea-gdp/</a></li>
+<li>eScholarship (University of California). (2004). The Crisis of Governance in PNG's Power Sector. <a href="https://escholarship.org/content/qt3hp3g80j/qt3hp3g80j_noSplash_fd0a551969ee3fcc2120a52d102d5950.pdf?t=krnoza" target="_blank">https://escholarship.org/content/qt3hp3g80j/qt3hp3g80j_noSplash_fd0a551969ee3fcc2120a52d102d5950.pdf?t=krnoza</a></li>
+<li>GEM Wiki. (n.d.). Power Sector Transition in Papua New Guinea. <a href="https://www.gem.wiki/Power_Sector_Transition_in_Papua_New_Guinea" target="_blank">https://www.gem.wiki/Power_Sector_Transition_in_Papua_New_Guinea</a></li>
+<li>DFAT. (2020). Evaluation of Road Management in Papua New Guinea. <a href="https://www.dfat.gov.au/sites/default/files/ode-evaluation-road-management-in-papua-new-guinea.pdf" target="_blank">https://www.dfat.gov.au/sites/default/files/ode-evaluation-road-management-in-papua-new-guinea.pdf</a></li>
+
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>PNG Geothermal Solutions</h3>
+                    <p>Harnessing Papua New Guinea's volcanic potential to bring sustainable, reliable energy to its people.</p>
+           
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#about">About PNG</a></li>
+                        <li><a href="#team">Our Team</a></li>
+                        <li><a href="#process">Geothermal Process</a></li>
+                        <li><a href="#prospects">Prospects</a></li>
+                        <li><a href="#challenges">Challenges</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Port Moresby, Papua New Guinea</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Port Credit, Canada</li>
+                        <li><i class="fas fa-phone"></i> +1 (437) 450-4378</li>
+                        <li><i class="fas fa-envelope"></i> info@pnggeothermal.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Three and a Half Men Geothermal Initiative. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple animation trigger on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateElements = document.querySelectorAll('.card-3d, .floating, .step, .member, .prospect-card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            animateElements.forEach(el => {
+                el.style.opacity = 0;
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
