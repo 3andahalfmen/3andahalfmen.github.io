@@ -642,6 +642,164 @@
         .floating {
             animation: float 3s ease-in-out infinite;
         }
+
+        /* Calculator Styles */
+        .calculator-container {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+
+        .calculator-controls {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--primary);
+        }
+
+        .energy-select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: var(--light);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .slider {
+            width: 100%;
+            height: 8px;
+            background: #ddd;
+            border-radius: 5px;
+            outline: none;
+            -webkit-appearance: none;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            background: var(--secondary);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .slider::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            background: var(--secondary);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .calculator-results {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .result-card {
+            background: rgba(52, 152, 219, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            border-left: 4px solid var(--secondary);
+        }
+
+        .result-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        .result-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 5px;
+        }
+
+        .result-detail {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .calculator-comparison {
+            margin-top: 40px;
+        }
+
+        .comparison-chart {
+            height: 300px;
+            width: 100%;
+            margin: 20px 0;
+            background: #f9f9f9;
+            border-radius: 8px;
+            display: flex;
+            align-items: flex-end;
+            padding: 20px;
+            position: relative;
+        }
+
+        .data-source {
+            font-size: 0.8rem;
+            color: #666;
+            text-align: right;
+            margin-top: 10px;
+        }
+
+        .calculator-notes {
+            background: var(--light);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+        }
+
+        .calculator-notes h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .calculator-notes ul {
+            list-style-type: none;
+        }
+
+        .calculator-notes li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .calculator-notes li:before {
+            content: "•";
+            color: var(--accent);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        @media (max-width: 768px) {
+            .calculator-results {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .calculator-controls {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
@@ -966,6 +1124,85 @@
         </div>
     </section>
 
+    <section id="calculator" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Energy Cost Calculator</h2>
+                <p>Compare the costs of different energy sources for Papua New Guinea</p>
+            </div>
+            
+            <div class="calculator-container card-3d">
+                <div class="calculator-controls">
+                    <div class="input-group">
+                        <label for="energy-type">Energy Source:</label>
+                        <select id="energy-type" class="energy-select">
+                            <option value="geothermal">Geothermal</option>
+                            <option value="diesel">Diesel</option>
+                            <option value="solar">Solar PV</option>
+                            <option value="hydro">Hydropower</option>
+                            <option value="coal">Coal</option>
+                            <option value="natural-gas">Natural Gas</option>
+                        </select>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="capacity">Capacity (MW):</label>
+                        <input type="range" id="capacity" min="1" max="100" value="10" class="slider">
+                        <span id="capacity-value">10 MW</span>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="lifespan">Project Lifespan (years):</label>
+                        <input type="range" id="lifespan" min="10" max="40" value="25" class="slider">
+                        <span id="lifespan-value">25 years</span>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="utilization">Capacity Utilization (%):</label>
+                        <input type="range" id="utilization" min="50" max="95" value="80" class="slider">
+                        <span id="utilization-value">80%</span>
+                    </div>
+                </div>
+                
+                <div class="calculator-results">
+                    <div class="result-card">
+                        <h3>Capital Costs</h3>
+                        <div class="result-value" id="capital-cost">$45 million</div>
+                        <div class="result-detail">Initial investment required</div>
+                    </div>
+                    
+                    <div class="result-card">
+                        <h3>LCOE</h3>
+                        <div class="result-value" id="lcoe">$0.08/kWh</div>
+                        <div class="result-detail">Levelized cost of energy</div>
+                    </div>
+                    
+                    <div class="result-card">
+                        <h3>Annual Output</h3>
+                        <div class="result-value" id="annual-output">70,080 MWh</div>
+                        <div class="result-detail">Energy produced per year</div>
+                    </div>
+                    
+                    <div class="result-card">
+                        <h3>CO₂ Emissions</h3>
+                        <div class="result-value" id="emissions">22,000 kg</div>
+                        <div class="result-detail">Per year</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="calculator-notes">
+                <h3>Key Considerations for PNG</h3>
+                <ul>
+                    <li><strong>Geothermal:</strong> High upfront costs but lowest LCOE long-term. Ideal for baseload power.</li>
+                    <li><strong>Diesel:</strong> Most expensive but widely used in remote areas. Vulnerable to fuel price fluctuations.</li>
+                    <li><strong>Solar PV:</strong> Moderate costs but requires battery storage for consistent supply.</li>
+                    <li><strong>Hydropower:</strong> Seasonal variations affect output. Environmental concerns.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
     <section id="presentation" class="section">
         <div class="container">
             <div class="section-title">
@@ -1084,6 +1321,144 @@
     </footer>
 
     <script>
+        // Energy data for PNG (values in USD)
+        const energyData = {
+            geothermal: {
+                capitalCost: 4500, // $/kW
+                fixedOM: 80, // $/kW-year
+                variableOM: 0.01, // $/kWh
+                fuelCost: 0,
+                efficiency: 0.85,
+                capacityFactor: 0.85,
+                lifespan: 30,
+                co2: 50 // kg/MWh
+            },
+            diesel: {
+                capitalCost: 1200,
+                fixedOM: 60,
+                variableOM: 0.02,
+                fuelCost: 0.25, // $/kWh
+                efficiency: 0.35,
+                capacityFactor: 0.75,
+                lifespan: 20,
+                co2: 800
+            },
+            solar: {
+                capitalCost: 1800,
+                fixedOM: 25,
+                variableOM: 0,
+                fuelCost: 0,
+                efficiency: 1,
+                capacityFactor: 0.25,
+                lifespan: 25,
+                co2: 50
+            },
+            hydro: {
+                capitalCost: 3500,
+                fixedOM: 50,
+                variableOM: 0.005,
+                fuelCost: 0,
+                efficiency: 0.90,
+                capacityFactor: 0.50,
+                lifespan: 40,
+                co2: 20
+            },
+            coal: {
+                capitalCost: 3500,
+                fixedOM: 100,
+                variableOM: 0.015,
+                fuelCost: 0.05,
+                efficiency: 0.35,
+                capacityFactor: 0.80,
+                lifespan: 30,
+                co2: 1000
+            },
+            "natural-gas": {
+                capitalCost: 1000,
+                fixedOM: 40,
+                variableOM: 0.01,
+                fuelCost: 0.10,
+                efficiency: 0.50,
+                capacityFactor: 0.85,
+                lifespan: 25,
+                co2: 500
+            }
+        };
+
+        // DOM elements
+        const energyTypeSelect = document.getElementById('energy-type');
+        const capacitySlider = document.getElementById('capacity');
+        const capacityValue = document.getElementById('capacity-value');
+        const lifespanSlider = document.getElementById('lifespan');
+        const lifespanValue = document.getElementById('lifespan-value');
+        const utilizationSlider = document.getElementById('utilization');
+        const utilizationValue = document.getElementById('utilization-value');
+        const capitalCostElement = document.getElementById('capital-cost');
+        const lcoeElement = document.getElementById('lcoe');
+        const annualOutputElement = document.getElementById('annual-output');
+        const emissionsElement = document.getElementById('emissions');
+        const comparisonChart = document.getElementById('comparison-chart');
+
+        // Event listeners
+        energyTypeSelect.addEventListener('change', updateCalculator);
+        capacitySlider.addEventListener('input', updateSliderValue);
+        capacitySlider.addEventListener('change', updateCalculator);
+        lifespanSlider.addEventListener('input', updateSliderValue);
+        lifespanSlider.addEventListener('change', updateCalculator);
+        utilizationSlider.addEventListener('input', updateSliderValue);
+        utilizationSlider.addEventListener('change', updateCalculator);
+
+        // Initialize calculator
+        document.addEventListener('DOMContentLoaded', function() {
+            updateSliderValue();
+            updateCalculator();
+        });
+
+        // Update slider value displays
+        function updateSliderValue() {
+            capacityValue.textContent = `${capacitySlider.value} MW`;
+            lifespanValue.textContent = `${lifespanSlider.value} years`;
+            utilizationValue.textContent = `${utilizationSlider.value}%`;
+        }
+
+        // Main calculator function
+        function updateCalculator() {
+            const energyType = energyTypeSelect.value;
+            const capacity = parseFloat(capacitySlider.value); // MW
+            const lifespan = parseFloat(lifespanSlider.value); // years
+            const utilization = parseFloat(utilizationSlider.value) / 100; // decimal
+            
+            const data = energyData[energyType];
+            
+            // Adjust capacity factor based on utilization slider
+            const capacityFactor = data.capacityFactor * utilization;
+            
+            // Calculations
+            const capitalCost = data.capitalCost * capacity * 1000; // Convert MW to kW
+            const fixedOM = data.fixedOM * capacity * 1000;
+            const annualOutput = capacity * 1000 * capacityFactor * 8760; // kWh/year
+            const variableOM = data.variableOM * annualOutput;
+            const fuelCost = data.fuelCost * annualOutput / data.efficiency;
+            const totalAnnualCost = fixedOM + variableOM + fuelCost;
+            
+            // Levelized Cost of Energy (LCOE) calculation
+            const discountRate = 0.08; // 8% discount rate for PNG
+            const presentValueFactor = (1 - Math.pow(1 + discountRate, -lifespan)) / discountRate;
+            const totalCostPV = capitalCost + totalAnnualCost * presentValueFactor;
+            const totalEnergyPV = annualOutput * presentValueFactor;
+            const lcoe = totalCostPV / totalEnergyPV;
+            
+            // CO2 emissions
+            const emissions = data.co2 * annualOutput / 1000; // kg
+            
+            // Update UI
+            capitalCostElement.textContent = `$${(capitalCost / 1000000).toFixed(1)} million`;
+            lcoeElement.textContent = `$${lcoe.toFixed(2)}/kWh`;
+            annualOutputElement.textContent = `${(annualOutput / 1000).toLocaleString()} MWh`;
+            emissionsElement.textContent = `${(emissions / 1000).toLocaleString()} tons`;
+            
+        }
+
         // Simple animation trigger on scroll
         document.addEventListener('DOMContentLoaded', function() {
             const animateElements = document.querySelectorAll('.card-3d, .floating, .step, .member, .prospect-card');
