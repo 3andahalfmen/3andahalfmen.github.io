@@ -489,8 +489,13 @@
             opacity: 0.9;
         }
         
+        .references-container {
+            width: 100%;
+            overflow: hidden;
+        }
+        
         .references-list {
-            columns: 1;
+            columns: 2;
             column-gap: 40px;
             padding: 0;
             margin: 0;
@@ -503,6 +508,15 @@
             padding-right: 10px;
             font-size: 0.9rem;
             line-height: 1.4;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        
+        .reference-link {
+            display: inline-block;
+            word-break: break-all;
+            color: var(--secondary);
+            font-size: 0.85em;
         }
         
         /* Footer */
@@ -617,6 +631,11 @@
             .references-list li {
                 padding-right: 0;
                 font-size: 0.85rem;
+            }
+            
+            .reference-link {
+                word-break: break-word;
+                hyphens: auto;
             }
             
             nav ul {
