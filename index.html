@@ -1764,6 +1764,127 @@
     }
 </style>
 
+<!-- Resources Section -->
+<section id="resources" class="section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Resources & Documentation</h2>
+            <p>Explore our complete research materials, references, and project documentation</p>
+        </div>
+        
+        <div class="resources-grid">
+            <!-- References Card -->
+            <div class="resource-card card-3d">
+                <div class="resource-icon">
+                    <i class="fas fa-book"></i>
+                </div>
+                <h3>Complete References</h3>
+                <p>All academic papers, reports, and data sources used in our research and calculations.</p>
+                <a href="#references" class="resource-btn">View References</a>
+            </div>
+            
+            <!-- Research Paper Card -->
+            <div class="resource-card card-3d">
+                <div class="resource-icon">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <h3>Research Paper</h3>
+                <p>Our detailed technical paper analyzing Papua New Guinea's geothermal potential.</p>
+                <a href="https://docs.google.com/document/d/1jhxeTc7dWJhFi_gETl-V4f_PoGCH6J_enSJ8Rsf_oqQ/edit?usp=sharing" target="_blank" class="resource-btn">Read Paper</a>
+            </div>
+            
+            <!-- Team Documentation Card -->
+            <div class="resource-card card-3d">
+                <div class="resource-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>Team Documentation/Script</h3>
+                <p>Meeting notes, project timeline, and individual contributions.</p>
+                <a href="https://docs.google.com/document/d/1YDXceV252L0h29r0a28q0pPDHxiSZF4EF2WgGj9yRcY/edit?usp=sharing" target="_blank" class="resource-btn">View Docs</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Resources Section Styles */
+    .resources-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+    }
+    
+    .resource-card {
+        background: white;
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: var(--transition);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .resource-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+    
+    .resource-icon {
+        width: 80px;
+        height: 80px;
+        background: rgba(52, 152, 219, 0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        color: var(--secondary);
+        font-size: 2rem;
+    }
+    
+    .resource-card h3 {
+        margin-bottom: 15px;
+        color: var(--primary);
+    }
+    
+    .resource-card p {
+        margin-bottom: 20px;
+        font-size: 1rem;
+        color: #666;
+    }
+    
+    .resource-btn {
+        display: inline-block;
+        background: var(--secondary);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 50px;
+        font-weight: 500;
+        transition: var(--transition);
+        margin-top: auto;
+        width: fit-content;
+    }
+    
+    .resource-btn:hover {
+        background: #2980b9;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    @media (max-width: 768px) {
+        .resources-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .resource-card {
+            padding: 25px;
+        }
+    }
+</style>
+
     <!-- Footer -->
     <footer id="contact">
         <div class="container">
