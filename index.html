@@ -1253,15 +1253,15 @@
         </div>
     </section>
 
-    <section id="energycalculations" class="section">
+    <section id="modelshowcase" class="section">
         <style>
             * {box-sizing: border-box}
             body {font-family: Verdana, sans-serif; margin:0}
-            .mySlides {display: none}
+            .mySlides2 {display: none}
             img {vertical-align: middle;}
       
             /* Slideshow container */
-            .slideshow-container {
+            .slideshow-container2 {
               margin-top: 2%;
               max-width: 80%;
               position: relative;
@@ -1316,7 +1316,7 @@
             }
       
             /* The dots/bullets/indicators */
-            .dot {
+            .dot3 {
               cursor: pointer;
               height: 15px;
               width: 15px;
@@ -1367,35 +1367,41 @@
             <h1 style="font-size: 3vw; font-weight: bold;">3D Model of Power Plant: </h1>
             <body>
       
-            <div class="slideshow-container">
+            <div class="slideshow-container2">
       
-            <div class="mySlides fade">
+            <div class="mySlides2 fade">
               <div class="numbertext">1 / 6</div>
               <img src="lowpressureturbine.png" style="width:50%; margin-left: 25%;">
+              <div class="text" style="font-size: 1.5vw; font-weight: bold; color: black; ">Low Pressure Turbine</div>
             </div>
       
-            <div class="mySlides fade">
+            <div class="mySlides2 fade">
               <div class="numbertext">2 / 6</div>
               <img src="intermediatepressureturbine.png" style="width:50%; margin-left: 25%;">
+              <div class="text" style="font-size: 1.5vw; font-weight: bold; color: black; ">Intermediate Pressure Turbine</div>
             </div>
     
-            <div class="mySlides fade">
+            <div class="mySlides2 fade">
                 <div class="numbertext">3 / 6</div>
                 <img src="highpressureturbine.png" style="width:50%; margin-left: 25%;">
+                <div class="text" style="font-size: 1.5vw; font-weight: bold; color: black; ">High Pressure Turbine</div>
             </div>
-            <div class="mySlides fade">
+            <div class="mySlides2 fade">
                 <div class="numbertext">4 / 6</div>
                 <img src="turbinethread.png" style="width:50%; margin-left: 25%;">
+                <div class="text" style="font-size: 1.5vw; font-weight: bold; color: black; ">Turbine Thread</div>
             </div>
         
-            <div class="mySlides fade">
+            <div class="mySlides2 fade">
                 <div class="numbertext">5 / 6</div>
                 <img src="topcasing.png" style="width:50%; margin-left: 25%;">
+                <div class="text" style="font-size: 1.5vw; font-weight: bold; color: black; ">Top Casing</div>
             </div>
       
-            <div class="mySlides fade">
+            <div class="mySlides2 fade">
                   <div class="numbertext">6 / 6</div>
                   <img src="bottomcasing.png" style="width:50%; margin-left: 25%;">
+                  <div class="text" style="font-size: 1.5vw; font-weight: bold; color: black; ">Bottom Casing</div>
             </div>
       
             <a class="prev" onclick="plusSlides(-1)">❮</a>
@@ -1405,12 +1411,12 @@
             <br>
       
             <div style="text-align:center">
-              <span class="dot" onclick="currentSlide(1)"></span> 
-              <span class="dot" onclick="currentSlide(2)"></span> 
-              <span class="dot" onclick="currentSlide(3)"></span> 
-              <span class="dot" onclick="currentSlide(4)"></span> 
-              <span class="dot" onclick="currentSlide(5)"></span> 
-              <span class="dot" onclick="currentSlide(6)"></span> 
+              <span class="dot3" onclick="currentSlide(1)"></span> 
+              <span class="dot3" onclick="currentSlide(2)"></span> 
+              <span class="dot3" onclick="currentSlide(3)"></span> 
+              <span class="dot3" onclick="currentSlide(4)"></span> 
+              <span class="dot3" onclick="currentSlide(5)"></span> 
+              <span class="dot3" onclick="currentSlide(6)"></span> 
             </div>
       
             <script>
@@ -1427,8 +1433,8 @@
       
             function showSlides(n) {
               let i;
-              let slides = document.getElementsByClassName("mySlides");
-              let dots = document.getElementsByClassName("dot");
+              let slides = document.getElementsByClassName("mySlides2");
+              let dots = document.getElementsByClassName("dot3");
               if (n > slides.length) {slideIndex = 1}    
               if (n < 1) {slideIndex = slides.length}
               for (i = 0; i < slides.length; i++) {
