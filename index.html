@@ -1555,6 +1555,133 @@
       </div>
 </section>
 
+<!-- Add this near the end before Resources -->
+    <section id="faq" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Common questions about geothermal energy in Papua New Guinea</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item card-3d">
+                    <button class="faq-question">
+                        <span>How does geothermal compare to other renewables in PNG?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Geothermal offers several advantages over solar and hydro in PNG's context. Unlike solar which is intermittent, geothermal provides baseload power 24/7. Compared to hydro which depends on seasonal rainfall, geothermal is more consistent year-round. Additionally, geothermal plants have a smaller physical footprint than hydro dams or large solar farms, important in PNG's mountainous terrain.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item card-3d">
+                    <button class="faq-question">
+                        <span>What are the environmental impacts?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Geothermal has minimal environmental impact compared to fossil fuels. The main considerations are:</p>
+                        <ul>
+                            <li>Small land use footprint</li>
+                            <li>Minimal CO2 emissions (about 5% of a natural gas plant)</li>
+                            <li>Potential for induced seismicity (careful site selection minimizes this)</li>
+                            <li>Proper management of geothermal fluids to prevent contamination</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Add more FAQ items as needed -->
+            </div>
+        </div>
+    </section>
+
+    <style>
+        /* FAQ Styles */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            width: 100%;
+            padding: 20px;
+            text-align: left;
+            background: white;
+            border: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--primary);
+            transition: all 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background: #f8f9fa;
+        }
+        
+        .faq-question i {
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            background: #f8f9fa;
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 20px;
+            max-height: 500px;
+        }
+        
+        .faq-answer p, .faq-answer ul {
+            margin-bottom: 15px;
+        }
+        
+        .faq-answer ul {
+            padding-left: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .faq-question {
+                font-size: 1rem;
+                padding: 15px;
+            }
+        }
+    </style>
+
+    <script>
+        // FAQ functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                item.classList.toggle('active');
+                
+                // Close other open items
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    if (otherItem !== item && otherItem.classList.contains('active')) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
+
     <!-- References Section -->
     <section class="references section">
         <div class="container">
